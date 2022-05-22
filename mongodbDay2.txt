@@ -1,0 +1,642 @@
+data base creation 
+
+use GUVI
+
+ Student collection creation 
+ 
+ db.createCollection(students)
+ 
+ db.students.insertMany[{
+
+	"id" : 1,
+	"studentName" : "student1",
+	"email" : "student@mail.com",
+	"password" : "123456789",
+	"batch" : "251d",
+	"codekataData" : [
+		{
+			"topic_id" : 1,
+			"questionId" : 1,
+			"problemStatus" : "solved"
+		},
+		{
+			"topic_id" : 2,
+			"questionId" : 3,
+			"problemStatus" : "solved"
+		},
+		{
+			"topic_id" : 3,
+			"questionId" : 3,
+			"problemStatus" : "solved"
+		}
+	],
+	"tasks" : [
+		{
+			"task_id" : 1,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-01-01T05:30:00.000+05:30")
+		},
+		{
+			"task_id" : 2,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-01-02T05:30:00.000+05:30")
+		},
+		{
+			"task_id" : 1,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-01-03T05:30:00.000+05:30")
+		},
+    {
+
+	"id" : 2,
+	"studentName" : "student2",
+	"email" : "student@mail.com",
+	"password" : "123456789",
+	"batch" : "251d",
+	"codekataData" : [
+		{
+			"topic_id" : 1,
+			"questionId" : 1,
+			"problemStatus" : "solved"
+		},
+		{
+			"topic_id" : 2,
+			"questionId" : 3,
+			"problemStatus" : "solved"
+		},
+		{
+			"topic_id" : 3,
+			"questionId" : 3,
+			"problemStatus" : "solved"
+		}
+	],
+	"tasks" : [
+		{
+			"task_id" : 1,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-02-01T05:30:00.000+05:30")
+		},
+		{
+			"task_id" : 2,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-02-02T05:30:00.000+05:30")
+		},
+		{
+			"task_id" : 1,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-02-03T05:30:00.000+05:30")
+		}
+	]
+},{
+
+	"id" : 2,
+	"studentName" : "student3",
+	"email" : "student@mail.com",
+	"password" : "123456789",
+	"batch" : "251d",
+	"codekataData" : [
+		{
+			"topic_id" : 1,
+			"questionId" : 1,
+			"problemStatus" : "solved"
+		},
+		{
+			"topic_id" : 2,
+			"questionId" : 3,
+			"problemStatus" : "solved"
+		},
+		{
+			"topic_id" : 3,
+			"questionId" : 3,
+			"problemStatus" : "solved"
+		}
+	],
+	"tasks" : [
+		{
+			"task_id" : 1,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-03-01T05:30:00.000+05:30")
+		},
+		{
+			"task_id" : 2,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-03-02T05:30:00.000+05:30")
+		},
+		{
+			"task_id" : 1,
+			"sourceUrl" : "github url",
+			"deployedurp" : "netlify url",
+			"submittedON" : ISODate("2022-03-03T05:30:00.000+05:30")
+		}
+	]
+}
+    
+    ]
+
+
+
+
+
+// Codekatta Collection 
+
+db.createCollection("codeKatta")
+
+db.codeKatta.insertMany([{
+	"_id" : ObjectId("6289376e1a4ad771b5373de4"),
+	"question" : 1,
+	"description" : "question 1 text",
+	"questionId" : 1,
+	"sampleInput" : "sample input",
+	"sampleOutput" : "sample output"
+},
+
+/* 2 createdAt:5/22/2022, 12:33:25 AM*/
+{
+	"_id" : ObjectId("6289377d1a4ad771b5373de5"),
+	"question" : 2,
+	"description" : "question 2 text",
+	"questionId" : 2,
+	"sampleInput" : "sample input",
+	"sampleOutput" : "sample output"
+},
+
+/* 3 createdAt:5/22/2022, 12:33:35 AM*/
+{
+	"_id" : ObjectId("628937871a4ad771b5373de6"),
+	"question" : 3,
+	"description" : "question 3 text",
+	"questionId" : 3,
+	"sampleInput" : "sample input",
+	"sampleOutput" : "sample output"
+}])
+
+
+
+
+// Attendence collection creation 
+
+db.createCollection("attendence")
+
+
+db.attendence.insertMany([{
+	"_id" : ObjectId("62893a2b1a4ad771b5373de7"),
+	"id" : 1,
+	"date" : ISODate("2020-01-01T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 1,
+	"taskId" : 1,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 2 createdAt:5/22/2022, 12:45:12 AM*/
+{
+	"_id" : ObjectId("62893a401a4ad771b5373de8"),
+	"id" : 2,
+	"date" : ISODate("2020-01-20T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 2,
+	"taskId" : 2,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 3 createdAt:5/22/2022, 12:45:22 AM*/
+{
+	"_id" : ObjectId("62893a4a1a4ad771b5373de9"),
+	"id" : 3,
+	"date" : ISODate("2020-02-10T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 3,
+	"taskId" : 3,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 4 createdAt:5/22/2022, 12:45:32 AM*/
+{
+	"_id" : ObjectId("62893a541a4ad771b5373dea"),
+	"id" : 4,
+	"date" : ISODate("2020-02-24T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 4,
+	"taskId" : 4,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 5 createdAt:5/22/2022, 12:45:41 AM*/
+{
+	"_id" : ObjectId("62893a5d1a4ad771b5373deb"),
+	"id" : 5,
+	"date" : ISODate("2020-03-12T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 5,
+	"taskId" : 5,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 6 createdAt:5/22/2022, 4:24:24 AM*/
+{
+	"_id" : ObjectId("62896da01a4ad771b5373e00"),
+	"id" : 1,
+	"date" : ISODate("2020-01-01T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 1,
+	"taskId" : 1,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 7 createdAt:5/22/2022, 4:24:24 AM*/
+{
+	"_id" : ObjectId("62896da01a4ad771b5373e01"),
+	"id" : 2,
+	"date" : ISODate("2020-01-20T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 2,
+	"taskId" : 2,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 8 createdAt:5/22/2022, 4:24:24 AM*/
+{
+	"_id" : ObjectId("62896da01a4ad771b5373e02"),
+	"id" : 3,
+	"date" : ISODate("2020-02-10T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 3,
+	"taskId" : 3,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 9 createdAt:5/22/2022, 4:24:24 AM*/
+{
+	"_id" : ObjectId("62896da01a4ad771b5373e03"),
+	"id" : 4,
+	"date" : ISODate("2020-02-24T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 4,
+	"taskId" : 4,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+},
+
+/* 10 createdAt:5/22/2022, 4:24:24 AM*/
+{
+	"_id" : ObjectId("62896da01a4ad771b5373e04"),
+	"id" : 5,
+	"date" : ISODate("2020-03-12T05:30:00.000+05:30"),
+	"sessionlink" : "Session link",
+	"recordingLink" : "recording-link",
+	"mentor" : "101",
+	"topicId" : 5,
+	"taskId" : 5,
+	"batch" : "251d",
+	"attendedUsers" : [ 1, 2, 3 ]
+}])
+
+
+/// Compnay Drives collectoin creating 
+
+
+
+db.createCollection("companyDrives")
+
+db.companyDrives.insertMany([{
+	"_id" : ObjectId("62893bae1a4ad771b5373df1"),
+	"id" : 1,
+	"companyName" : "company1",
+	"date" : ISODate("2020-11-01T05:30:00.000+05:30"),
+	"studentsattended" : [ 1, 2, 3 ]
+},
+
+/* 2 createdAt:5/22/2022, 12:51:34 AM*/
+{
+	"_id" : ObjectId("62893bbe1a4ad771b5373df2"),
+	"id" : 2,
+	"companyName" : "company3",
+	"date" : ISODate("2020-12-01T05:30:00.000+05:30"),
+	"studentsattended" : [ 1, 2 ]
+},
+
+/* 3 createdAt:5/22/2022, 12:51:54 AM*/
+{
+	"_id" : ObjectId("62893bd21a4ad771b5373df3"),
+	"id" : 3,
+	"companyName" : "company3",
+	"date" : ISODate("2021-01-01T05:30:00.000+05:30"),
+	"studentsattended" : [ 1, 2, 3 ]
+},
+
+/* 4 createdAt:5/22/2022, 12:52:12 AM*/
+{
+	"_id" : ObjectId("62893be41a4ad771b5373df4"),
+	"id" : 4,
+	"companyName" : "company4",
+	"date" : ISODate("2021-02-01T05:30:00.000+05:30"),
+	"studentsattended" : [ 1, 2, 3 ]
+}])
+
+  
+
+///. tasks collection creation 
+
+db.createCollection('tasks')
+
+db.tasks.insertMany([{
+	"_id" : ObjectId("62894bfa1a4ad771b5373dfb"),
+	"id" : 1,
+	"taskName" : "task1",
+	"taskDescription" : "task 1 description ",
+	"taskLink" : "tasklink.com"
+},
+
+/* 2 createdAt:5/22/2022, 2:00:50 AM*/
+{
+	"_id" : ObjectId("62894bfa1a4ad771b5373dfc"),
+	"id" : 2,
+	"taskName" : "task2",
+	"taskDescription" : "task 2 description ",
+	"taskLink" : "tasklink.com"
+},
+
+/* 3 createdAt:5/22/2022, 2:00:50 AM*/
+{
+	"_id" : ObjectId("62894bfa1a4ad771b5373dfd"),
+	"id" : 3,
+	"taskName" : "task3",
+	"taskDescription" : "task 3 description ",
+	"taskLink" : "tasklink.com"
+},
+
+/* 4 createdAt:5/22/2022, 2:00:50 AM*/
+{
+	"_id" : ObjectId("62894bfa1a4ad771b5373dfe"),
+	"id" : 4,
+	"taskName" : "task4",
+	"taskDescription" : "task 4 description ",
+	"taskLink" : "tasklink.com"
+},
+
+/* 5 createdAt:5/22/2022, 2:00:50 AM*/
+{
+	"_id" : ObjectId("62894bfa1a4ad771b5373dff"),
+	"id" : 5,
+	"taskName" : "task5",
+	"taskDescription" : "task 5 description ",
+	"taskLink" : "tasklink.com"
+}])
+
+
+
+
+//// topics collection creation 
+
+
+
+db.createCollection("topics")
+
+
+db.topics.insertMany([{
+	"_id" : ObjectId("62893ad01a4ad771b5373dec"),
+	"id" : 1,
+	"title" : "topic1",
+	"description" : "topic 1 description"
+},
+
+/* 2 createdAt:5/22/2022, 12:47:46 AM*/
+{
+	"_id" : ObjectId("62893ada1a4ad771b5373ded"),
+	"id" : 2,
+	"title" : "topic2",
+	"description" : "topic 2 description"
+},
+
+/* 3 createdAt:5/22/2022, 12:47:54 AM*/
+{
+	"_id" : ObjectId("62893ae21a4ad771b5373dee"),
+	"id" : 3,
+	"title" : "topic3",
+	"description" : "topic 3 description"
+},
+
+/* 4 createdAt:5/22/2022, 12:48:04 AM*/
+{
+	"_id" : ObjectId("62893aec1a4ad771b5373def"),
+	"id" : 4,
+	"title" : "topic4",
+	"description" : "topic 4 description"
+},
+
+/* 5 createdAt:5/22/2022, 12:48:12 AM*/
+{
+	"_id" : ObjectId("62893af41a4ad771b5373df0"),
+	"id" : 5,
+	"title" : "topic5",
+	"description" : "topic 5 description"
+}])
+
+
+
+/// creating mentorss  collection 
+
+
+db.createCollection("mentors")
+
+db.mentors.insertMany([{
+	"_id" : ObjectId("62893c6f1a4ad771b5373df5"),
+	"id" : 1,
+	"mentorName" : "mentor 1",
+	"email" : "mentor1@email.com",
+	"menteesCount" : 10
+},
+
+/* 2 createdAt:5/22/2022, 12:54:44 AM*/
+{
+	"_id" : ObjectId("62893c7c1a4ad771b5373df6"),
+	"id" : 2,
+	"mentorName" : "mentor 2",
+	"email" : "mentor2@email.com",
+	"menteesCount" : 16
+},
+
+/* 3 createdAt:5/22/2022, 12:55:05 AM*/
+{
+	"_id" : ObjectId("62893c911a4ad771b5373df7"),
+	"id" : 3,
+	"mentorName" : "mentor 3",
+	"email" : "mentor3@email.com",
+	"menteesCount" : 19
+},
+
+/* 4 createdAt:5/22/2022, 12:55:16 AM*/
+{
+	"_id" : ObjectId("62893c9c1a4ad771b5373df8"),
+	"id" : 4,
+	"mentorName" : "mentor 4",
+	"email" : "mentor4@email.com",
+	"menteesCount" : 23
+},
+
+/* 5 createdAt:5/22/2022, 12:55:37 AM*/
+{
+	"_id" : ObjectId("62893cb11a4ad771b5373df9"),
+	"id" : 5,
+	"mentorName" : "mentor 5",
+	"email" : "mentor5@email.com",
+	"menteesCount" : 34
+},
+
+/* 6 createdAt:5/22/2022, 12:55:51 AM*/
+{
+	"_id" : ObjectId("62893cbf1a4ad771b5373dfa"),
+	"id" : 6,
+	"mentorName" : "mentor 6",
+	"email" : "mentor6@email.com",
+	"menteesCount" : 44
+}])
+
+
+//////////////////////////////////////////////////// Questions  ///////////////////////////////////////////////////////////
+
+Question 1 : Find all the company drives which appeared  in the month of february
+
+
+db.attendence.aggregate([{
+    $lookup:{
+        from:"tasks",
+        localField:"taskId",
+        foreignField:"id", 
+        as:"tasks"
+    }},
+    {$lookup:{
+        from:"topics",
+        localField:"topicId",
+        foreignField:"id",
+        as:"topics"
+        
+        
+    }},{
+        $unwind:"$tasks"
+    },
+    {$unwind: "$topics"},
+    {$group: { _id: 
+    {month:{$month:"$date"},year:{$year: "$date"}
+   },topics : {
+$addToSet :"$topics.title"
+},
+tasks : {
+$addToSet : "$tasks.taskName" }
+        
+    }},
+    {
+$match : {
+"_id.month": 2 }
+}
+
+])
+
+
+
+
+Question 2 
+
+
+Find all the company drives happend in the month of January
+
+
+db.companyDrives.aggregate([{$group:{
+    _id:{
+        day:{$dayOfMonth:"$date"},
+        month:{$month:"$date"},
+        year:{$year:"$date"}
+        
+    },
+    companyName:{
+        $push:"$companyName"
+    }
+}},{$match:{
+    "_id.month":1
+}},{$project: {_id:1,companyName:1}}])
+
+
+
+
+#Question 3 :
+
+Finding all the students attended the company Drives 
+
+db.companyDrives.aggregate([{
+    $lookup:{
+        from:"student",
+        localField:"studentsattended",
+        foreignField:"id",
+        as:"students"
+        
+    }
+},{$unwind:"$students"},{$group:{_id:null,"students":{$addToSet: "$students.studentName"},"Company":{$addToSet: "$companyName"}}},{$project:{_id:0,students:1,Company:1}}])
+
+
+
+
+Find the number of problems solved by the user in codekata
+
+
+
+
+db.student.aggregate([{$match:{
+    id:2
+}},{$group: 
+    {_id:"codekataData.problemStatus",problemsSolved:{"$sum":1}}
+}])
+
+
+
+Find the Metor whose mentees count is greater than 15
+
+
+
+db.find({menteesCount:{$gt:15}},{mentorName:1,menteesCount:1})
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
